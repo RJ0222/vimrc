@@ -115,15 +115,15 @@ let g:syntastic_python_flake8_args = ['-m', 'flake8']
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_pylint_post_args="--max-line-length=120"
 let python_highlight_all=1
-syntax on
 
-" colorschem plugin
-Plugin 'jnurmine/Zenburn'
-colorscheme molokai
-let g:rehash256 = 1
-set termguicolors
-let g:sublimemonokai_term_italic = 1
-set background=dark
+syntax on
+Plugin 'dracula/vim'
+color dracula
+
+" let g:rehash256 = 1
+" set termguicolors
+" let g:sublimemonokai_term_italic = 1
+" set background=dark
 
 " cursor auto appeared on last time where file be opened
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -302,5 +302,6 @@ map <leader><space> :FixWhitespace<cr>
 
 " commenter
 Bundle 'scrooloose/nerdcommenter'
-" one space before when comment
+" one space before when comment && remove ^g
 let g:NERDSpaceDelims=1
+let g:NERDTreeNodeDelimiter = "\u00a0"

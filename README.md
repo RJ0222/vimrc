@@ -35,16 +35,13 @@ apt-get install vim
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/kidrocknroll/vimrc.git ~/.vim/vimrc && mv ~/.vim/vimrc/vimrc ~/.vimrc
-git clone https://github.com/tomasr/molokai /usr/share/vimcolors
-ln -sv /usr/share/vimcolors/colors/molokai.vim /usr/share/vim/vim81/colors/molokai.vim
 
 vim command:
 	:PluginInstall
 
 cd ~/.vim/bundle/YouCompleteMe/
-python3 install.py --clang-completer --go-completer --system-libclang
+python3 install.py --clang-completer --go-completer
 
 # if failed by timeout error :
-# while [[ 1 ]]; do git submodule update --init --recursive; if [[ $? -eq 0 ]]; then break; fi; done &
-
+# git submodule update --init --recursive
 ```
